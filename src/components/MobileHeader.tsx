@@ -49,8 +49,8 @@ export function MobileHeader({ homeHref = "#hero" }: MobileHeaderProps) {
   return (
     <>
       <nav
-        className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-text-secondary/10 bg-[#0F172A] px-6 pt-[max(1rem,env(safe-area-inset-top,1rem))] transition-all duration-300 md:px-8 ${
-          isScrolled ? "pb-2" : "pb-4"
+        className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-text-secondary/10 bg-[#0F172A] px-4 pt-[max(0.25rem,env(safe-area-inset-top,0.25rem))] transition-all duration-300 md:px-8 md:pt-[max(1rem,env(safe-area-inset-top,1rem))] ${
+          isScrolled ? "pb-2" : "pb-2 md:pb-4"
         }`}
         aria-label="Main navigation"
       >
@@ -78,7 +78,7 @@ export function MobileHeader({ homeHref = "#hero" }: MobileHeaderProps) {
           Book a Call
         </a>
       </nav>
-      <div className="h-[72px] shrink-0" aria-hidden="true" />
+      <div className="h-[calc(52px+env(safe-area-inset-top,0px))] shrink-0 md:h-[72px]" aria-hidden="true" />
 
       <AnimatePresence>
         {isOpen && (
