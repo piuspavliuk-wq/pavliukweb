@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -64,9 +65,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://example.com"
-  ),
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function RootLayout({
