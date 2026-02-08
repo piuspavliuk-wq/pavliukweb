@@ -38,7 +38,7 @@ export function MobileHeader({ homeHref = "#hero" }: MobileHeaderProps) {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 flex items-center justify-between border-b border-text-secondary/10 bg-[#0F172A] px-6 py-4"
+        className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-text-secondary/10 bg-[#0F172A] px-6 py-4"
         aria-label="Main navigation"
       >
         <button
@@ -67,6 +67,7 @@ export function MobileHeader({ homeHref = "#hero" }: MobileHeaderProps) {
           Book a Call
         </a>
       </nav>
+      <div className="h-[72px] shrink-0" aria-hidden="true" />
 
       <AnimatePresence>
         {isOpen && (
