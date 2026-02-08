@@ -9,8 +9,8 @@ interface MobileHeaderProps {
 }
 
 const navItems = [
-  { href: "/", label: "Home", variant: "secondary" as const },
-  { href: "/case-study", label: "Case Study", variant: "secondary" as const },
+  { href: "/", label: "Home", variant: "secondary" as const, external: false as const },
+  { href: "/case-study", label: "Case Study", variant: "secondary" as const, external: false as const },
   { href: "https://calendly.com/piuspavliuk/30min", label: "Book a Call", external: true, variant: "primary" as const },
 ] as const;
 
