@@ -50,7 +50,7 @@ export function AnimatedServiceCard({ children }: AnimatedServiceCardProps) {
   return (
     <motion.li
       variants={fadeUpVariants}
-      className="min-w-[min(18rem,85vw)] shrink-0 sm:min-w-0 sm:shrink"
+      className="w-full min-w-0 sm:min-w-0 sm:shrink"
     >
       <article className="h-full rounded-lg border border-text-secondary/10 bg-surface p-6 transition-[background-color,box-shadow] duration-200 hover:bg-[#25334a] hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
         {children}

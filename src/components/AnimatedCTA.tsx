@@ -7,6 +7,7 @@ interface AnimatedCTAProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
+  external?: boolean;
 }
 
 const baseClasses =
@@ -24,12 +25,15 @@ export function AnimatedCTA({
   children,
   variant = "primary",
   className = "",
+  external = false,
 }: AnimatedCTAProps) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <motion.a
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className={`${baseClasses} ${variantClasses[variant]} ${className}`}
       whileHover={shouldReduceMotion ? undefined : { y: -2 }}
       whileFocus={shouldReduceMotion ? undefined : { y: -2 }}

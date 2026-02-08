@@ -50,3 +50,9 @@ a,
 button {
   cursor: pointer;
 }
+
+/* Ensure pointer cursor on all descendants of interactive elements */
+a *,
+button * {
+  cursor: inherit;
+}

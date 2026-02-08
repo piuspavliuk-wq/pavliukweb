@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { AnimatedCTA } from "@/components/AnimatedCTA";
 import {
@@ -8,7 +9,7 @@ import { MobileHeader } from "@/components/MobileHeader";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <MobileHeader />
       <header>
         <HeroSection />
@@ -21,7 +22,7 @@ export default function Home() {
         <FinalCtaSection />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
@@ -41,7 +42,7 @@ function HeroSection() {
         bookings, and visibility in Google.
       </p>
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <AnimatedCTA href="#contact" variant="primary">
+        <AnimatedCTA href="https://calendly.com/piuspavliuk/30min" variant="primary" external>
           Book a Free Call
         </AnimatedCTA>
         <AnimatedCTA href="#case-study" variant="secondary">
@@ -125,8 +126,8 @@ function ServicesSection() {
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         What I Help Local Businesses With
       </AnimatedHeading>
-      <div className="mt-12 -mx-6 overflow-x-auto px-6 sm:mx-0 sm:overflow-visible sm:px-0 scroll-smooth [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-text-secondary/20">
-        <AnimatedServiceList className="flex gap-8 sm:grid sm:grid-cols-2">
+      <div className="mt-12">
+        <AnimatedServiceList className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {services.map((service) => (
           <AnimatedServiceCard key={service.title}>
             <h3 className="text-lg font-semibold text-text">
@@ -160,9 +161,14 @@ function CaseStudySection() {
         strong first impression.
       </p>
 
-      <article className="mt-10 rounded-lg border border-text-secondary/10 bg-surface p-8">
+      <article className="mt-10 min-w-0 overflow-hidden rounded-lg border border-text-secondary/10 bg-surface p-6 sm:p-8">
         <h3 className="text-xl font-semibold text-text">
-          Dental Clinic Website&nbsp;&mdash; Demo Build
+          <Link
+            href="/case-study"
+            className="transition-colors hover:text-accent"
+          >
+            Dental Clinic Website&nbsp;&mdash; Demo Build
+          </Link>
         </h3>
         <p className="mt-4 leading-relaxed text-text-secondary">
           A full working example of a dental clinic website, built the same way
@@ -171,32 +177,32 @@ function CaseStudySection() {
         </p>
 
         <ul className="mt-6 space-y-4 text-text-secondary">
-          <li className="flex items-start gap-3">
+          <li className="flex min-w-0 items-start gap-3">
             <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
-            <span>
+            <span className="min-w-0">
               <strong className="text-text">Service-focused page structure</strong>
               &nbsp;&mdash; so patients quickly find what they need and take
               action
             </span>
           </li>
-          <li className="flex items-start gap-3">
+          <li className="flex min-w-0 items-start gap-3">
             <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
-            <span>
+            <span className="min-w-0">
               <strong className="text-text">Online booking flow</strong>
               &nbsp;&mdash; fewer phone tag rounds, more confirmed appointments
             </span>
           </li>
-          <li className="flex items-start gap-3">
+          <li className="flex min-w-0 items-start gap-3">
             <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
-            <span>
+            <span className="min-w-0">
               <strong className="text-text">Local SEO-ready structure</strong>
               &nbsp;&mdash; built to help the clinic show up in Google Search
               and Maps
             </span>
           </li>
-          <li className="flex items-start gap-3">
+          <li className="flex min-w-0 items-start gap-3">
             <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
-            <span>
+            <span className="min-w-0">
               <strong className="text-text">Fast, mobile-first performance</strong>
               &nbsp;&mdash; most patients search on their phone; speed matters
             </span>
@@ -213,15 +219,20 @@ function CaseStudySection() {
       </article>
 
       {/* ── CTA below the card ── */}
-      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <AnimatedCTA href="#contact" variant="primary">
+      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:flex-wrap">
+        <AnimatedCTA href="https://calendly.com/piuspavliuk/30min" variant="primary" external>
           See How This Would Work for Your Business
+        </AnimatedCTA>
+        <AnimatedCTA href="/case-study" variant="secondary">
+          Explore the full case study
         </AnimatedCTA>
       </div>
       <p className="mt-4 text-center text-sm text-text-secondary">
         or{" "}
         <a
-          href="#contact"
+          href="https://calendly.com/piuspavliuk/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="underline underline-offset-4 transition-colors hover:text-accent"
         >
           request a free website review
@@ -322,7 +333,7 @@ function FinalCtaSection() {
         Get a Website That Works for Google and Your Business
       </AnimatedHeading>
       <div className="mt-10">
-        <AnimatedCTA href="#contact" variant="primary">
+        <AnimatedCTA href="https://calendly.com/piuspavliuk/30min" variant="primary" external>
           Book a Free Call
         </AnimatedCTA>
       </div>

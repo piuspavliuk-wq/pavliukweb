@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "custom websites for service businesses",
   ],
   authors: [{ name: "Custom Web Developer" }],
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: "/icon.svg",
+    apple: "/apple-icon",
+  },
   openGraph: {
     title: "Custom Web Developer for US Local Businesses",
     description:
@@ -26,6 +31,27 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
+    images: [
+      {
+        url: "/apple-icon",
+        width: 180,
+        height: 180,
+        alt: "Custom Web Developer - Logo",
+      },
+      {
+        url: "/img/logo.svg",
+        width: 237,
+        height: 237,
+        alt: "Custom Web Developer - Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Custom Web Developer for US Local Businesses",
+    description:
+      "Custom website development for US local service businesses and dental clinics.",
+    images: ["/apple-icon"],
   },
   robots: {
     index: true,
@@ -34,6 +60,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://example.com"
+  ),
 };
 
 export default function RootLayout({
