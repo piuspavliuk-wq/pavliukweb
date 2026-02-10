@@ -14,6 +14,7 @@ const navItems = [
   { href: "/", label: "Home", variant: "secondary" as const, external: false as const },
   { href: "/case-study", label: "Case Study", variant: "secondary" as const, external: false as const },
   { href: "mailto:bohdan@pavliukweb.com", label: "Request a Free Website Review", external: true, variant: "secondary" as const },
+  { href: "mailto:bohdan@pavliukweb.com", label: "bohdan@pavliukweb.com", external: true, variant: "secondary" as const },
 ] as const;
 
 const buttonClasses = {

@@ -224,7 +224,7 @@ function Footer() {
             href="mailto:bohdan@pavliukweb.com"
             className="text-sm text-text-secondary transition-colors hover:text-accent"
           >
-            Email
+            bohdan@pavliukweb.com
           </a>
         </nav>
       </div>

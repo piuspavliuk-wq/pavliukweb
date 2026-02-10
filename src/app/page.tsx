@@ -41,10 +41,11 @@ function HeroSection() {
         Custom web development for{" "}
         <Link
           href="/websites-for-us-local-businesses"
-          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent"
+          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent mr-0.5"
         >
           dental and medical practices
         </Link>
+        {" "}
         across all 50 states: more calls, bookings, and visibility in Google.
       </p>
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -136,10 +137,11 @@ function ServicesSection() {
         From{" "}
         <Link
           href="/websites-for-us-local-businesses"
-          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent"
+          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent mr-0.5"
         >
           websites for dental and medical practices
-        </Link>{" "}
+        </Link>
+        {" "}
         (solo to 15 employees) to ongoing support — here’s what I help with across all 50 states.
       </p>
       <div className="mt-12">
@@ -339,10 +341,11 @@ function IndustriesSection() {
         Dedicated page:{" "}
         <Link
           href="/websites-for-us-local-businesses"
-          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent"
+          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent mr-0.5"
         >
           Websites for Dental & Medical Practices
-        </Link>{" "}
+        </Link>
+        {" "}
         (all 50 states, 1–15 employees).
       </p>
     </section>
@@ -392,7 +395,7 @@ function Footer() {
             href="mailto:bohdan@pavliukweb.com"
             className="text-sm text-text-secondary transition-colors hover:text-accent"
           >
-            Email
+            bohdan@pavliukweb.com
           </a>
         </nav>
       </div>
