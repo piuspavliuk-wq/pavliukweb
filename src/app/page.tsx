@@ -35,7 +35,7 @@ function HeroSection() {
       className="mx-auto max-w-4xl px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-28"
     >
       <h1 className="text-4xl font-bold leading-tight tracking-tight text-text sm:text-5xl lg:text-6xl">
-        Custom Websites That Bring Local Customers
+        Website That Bring US Local Customers
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary sm:text-xl">
         Custom web development for US service businesses that want more calls,

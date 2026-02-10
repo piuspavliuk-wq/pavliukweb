@@ -84,6 +84,18 @@ export default function RootLayout({
 }
 
 function JsonLd() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Pavliuk Web",
+    url: SITE_URL,
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    serviceType: "Web Design for US Businesses",
+  };
+
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -151,6 +163,10 @@ function JsonLd() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
