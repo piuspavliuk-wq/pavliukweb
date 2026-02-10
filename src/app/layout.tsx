@@ -14,14 +14,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Custom Web Developer for US Local Businesses | Dental & Service Websites",
+  title: "Custom Web Developer for US Medical & Dental Practices | All 50 States",
   description:
-    "Custom website development for US local service businesses and dental clinics. No templates. Senior developer building fast, SEO-optimized websites that generate calls and bookings.",
+    "Custom website development for US dental and medical practices (1–15 employees). All 50 states. No templates. Senior developer building fast, SEO-optimized sites that generate calls and bookings.",
   keywords: [
     "custom website developer",
-    "web developer for local businesses",
     "dental website development",
-    "custom websites for service businesses",
+    "medical practice website",
+    "web developer for dental clinics",
+    "websites for medical practices",
   ],
   authors: [{ name: "Custom Web Developer" }],
   icons: {
@@ -30,9 +31,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon",
   },
   openGraph: {
-    title: "Custom Web Developer for US Local Businesses",
+    title: "Custom Web Developer for US Medical & Dental Practices",
     description:
-      "Custom website development for US local service businesses and dental clinics. Fast, SEO-optimized websites that generate calls and bookings.",
+      "Custom website development for US dental and medical practices (1–15 employees). All 50 states. Fast, SEO-optimized sites that generate calls and bookings.",
     type: "website",
     locale: "en_US",
     url: "/",
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Custom Web Developer for US Local Businesses",
+    title: "Custom Web Developer for US Medical & Dental Practices",
     description:
-      "Custom website development for US local service businesses and dental clinics.",
+      "Custom website development for US dental and medical practices. All 50 states. 1–15 employees.",
     images: ["/apple-icon"],
   },
   robots: {
@@ -93,7 +94,7 @@ function JsonLd() {
       "@type": "Country",
       name: "United States",
     },
-    serviceType: "Web Design for US Businesses",
+    serviceType: "Web Design for US Dental and Medical Practices",
   };
 
   const personSchema = {
@@ -102,22 +103,23 @@ function JsonLd() {
     name: "Custom Web Developer",
     jobTitle: "Senior Web Developer",
     description:
-      "Solo senior web developer specializing in custom websites for US local service businesses and dental clinics.",
+      "Solo senior web developer specializing in custom websites for US dental and medical practices (1–15 employees), serving all 50 states.",
     knowsAbout: [
       "Web Development",
       "SEO",
-      "Local Business Websites",
       "Dental Website Development",
+      "Medical Practice Websites",
+      "Local SEO",
     ],
-    url: "/",
+    url: SITE_URL,
   };
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Custom Web Development for Local Businesses",
+    name: "Custom Web Development for Dental and Medical Practices",
     description:
-      "Custom website development for US local service businesses. Specializing in dental clinics, professional practices, and service companies.",
+      "Custom website development for US dental and medical practices (solo to 15 employees). Serving all 50 states including California, Texas, Florida, and New York.",
     areaServed: {
       "@type": "Country",
       name: "United States",
@@ -155,10 +157,10 @@ function JsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Custom Web Developer for US Local Businesses",
+    name: "Custom Web Developer for US Medical & Dental Practices",
     description:
-      "Custom website development for US local service businesses and dental clinics.",
-    url: "/",
+      "Custom website development for US dental and medical practices (1–15 employees). All 50 states.",
+    url: SITE_URL,
   };
 
   return (

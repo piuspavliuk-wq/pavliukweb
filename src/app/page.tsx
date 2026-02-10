@@ -35,11 +35,17 @@ function HeroSection() {
       className="mx-auto max-w-4xl px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-28"
     >
       <h1 className="text-4xl font-bold leading-tight tracking-tight text-text sm:text-5xl lg:text-6xl">
-        Website That Bring US Local Customers
+        Website That Brings US Local Customers
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary sm:text-xl">
-        Custom web development for US service businesses that want more calls,
-        bookings, and visibility in Google.
+        Custom web development for{" "}
+        <Link
+          href="/websites-for-us-local-businesses"
+          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent"
+        >
+          dental and medical practices
+        </Link>
+        across all 50 states: more calls, bookings, and visibility in Google.
       </p>
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <AnimatedCTA href="https://calendly.com/piuspavliuk/30min" variant="primary" external>
@@ -50,7 +56,7 @@ function HeroSection() {
         </AnimatedCTA>
       </div>
       <p className="mt-8 text-sm text-text-secondary">
-        Trusted by local businesses • Built for Google • US-focused
+        Trusted by dental & medical practices • All 50 states • 1–15 employees • Built for Google
       </p>
     </section>
   );
@@ -124,8 +130,18 @@ function ServicesSection() {
       className="mx-auto max-w-4xl px-6 py-20"
     >
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
-        What I Help Local Businesses With
+        What I Help Dental & Medical Practices With
       </AnimatedHeading>
+      <p className="mt-4 max-w-2xl text-text-secondary">
+        From{" "}
+        <Link
+          href="/websites-for-us-local-businesses"
+          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent"
+        >
+          websites for dental and medical practices
+        </Link>{" "}
+        (solo to 15 employees) to ongoing support — here’s what I help with across all 50 states.
+      </p>
       <div className="mt-12">
         <AnimatedServiceList className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {services.map((service) => (
@@ -292,8 +308,7 @@ function WhyMeSection() {
 
 const industries = [
   "Dental clinics",
-  "Local service businesses",
-  "Professional practices",
+  "Medical practices",
 ];
 
 function IndustriesSection() {
@@ -305,8 +320,11 @@ function IndustriesSection() {
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         Industries I Work With
       </AnimatedHeading>
+      <p className="mt-4 max-w-2xl text-text-secondary">
+        Serving all 50 states. Solo practitioners to small teams (1–15 employees).
+      </p>
       <div className="mt-10 -mx-6 overflow-x-auto px-6 scroll-smooth sm:mx-0 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-text-secondary/20">
-        <ul className="flex gap-4 sm:grid sm:grid-cols-3">
+        <ul className="flex gap-4 sm:grid sm:grid-cols-2">
           {industries.map((industry) => (
             <li
               key={industry}
@@ -317,6 +335,16 @@ function IndustriesSection() {
           ))}
         </ul>
       </div>
+      <p className="mt-6 text-center text-sm text-text-secondary">
+        Dedicated page:{" "}
+        <Link
+          href="/websites-for-us-local-businesses"
+          className="font-medium text-text underline underline-offset-4 transition-colors hover:text-accent"
+        >
+          Websites for Dental & Medical Practices
+        </Link>{" "}
+        (all 50 states, 1–15 employees).
+      </p>
     </section>
   );
 }
@@ -351,22 +379,20 @@ function Footer() {
     <footer className="border-t border-text-secondary/10 py-10">
       <div className="mx-auto max-w-4xl px-6 sm:flex sm:items-center sm:justify-between">
         <p className="text-sm text-text-secondary">
-          Custom Web Developer for US Local Businesses
+          Custom Web Developer for US Medical & Dental Practices
         </p>
-        <nav className="mt-4 flex gap-6 sm:mt-0" aria-label="Footer">
+        <nav className="mt-4 flex flex-wrap gap-6 sm:mt-0" aria-label="Footer">
+          <Link
+            href="/websites-for-us-local-businesses"
+            className="text-sm text-text-secondary transition-colors hover:text-accent"
+          >
+            Dental & Medical Websites
+          </Link>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:bohdan@pavliukweb.com"
             className="text-sm text-text-secondary transition-colors hover:text-accent"
           >
             Email
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-text-secondary transition-colors hover:text-accent"
-          >
-            LinkedIn
           </a>
         </nav>
       </div>

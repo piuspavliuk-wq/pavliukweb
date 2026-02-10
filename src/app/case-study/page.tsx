@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { AnimatedCTA } from "@/components/AnimatedCTA";
 import { MobileHeader } from "@/components/MobileHeader";
+import { SITE_URL } from "@/lib/site";
 
 const CALENDLY_URL = "https://calendly.com/piuspavliuk/30min";
 const DEMO_URL = "https://cllinick.netlify.app/";
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
   title: "Dental Clinic Website — Demo Case Study | Custom Web Developer",
   description:
     "A conversion-focused demo website showing how I build websites for local service businesses. Attract local traffic, convert visitors into calls and bookings, and build trust.",
+  keywords: [
+    "dental clinic website",
+    "dentist website case study",
+    "local business website demo",
+    "conversion-focused website",
+  ],
   openGraph: {
     title: "Dental Clinic Website — Demo Case Study",
     description:
@@ -19,6 +26,10 @@ export const metadata: Metadata = {
     type: "website",
     url: "/case-study",
   },
+  alternates: {
+    canonical: "/case-study",
+  },
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function CaseStudyPage() {
@@ -210,18 +221,10 @@ function Footer() {
             Home
           </Link>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:bohdan@pavliukweb.com"
             className="text-sm text-text-secondary transition-colors hover:text-accent"
           >
             Email
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-text-secondary transition-colors hover:text-accent"
-          >
-            LinkedIn
           </a>
         </nav>
       </div>
