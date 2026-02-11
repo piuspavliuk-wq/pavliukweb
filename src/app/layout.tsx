@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
+import { LenisProvider } from "@/contexts/LenisContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -79,7 +80,12 @@ export default function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <LenisProvider>
+          <div className="gradient-bg" aria-hidden="true" />
+          {children}
+        </LenisProvider>
+      </body>
     </html>
   );
 }

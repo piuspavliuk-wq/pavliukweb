@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLenis } from "@/contexts/LenisContext";
 
 const SCROLL_THRESHOLD = 48;
 
@@ -14,7 +15,6 @@ const navItems = [
   { href: "/", label: "Home", variant: "secondary" as const, external: false as const },
   { href: "/case-study", label: "Case Study", variant: "secondary" as const, external: false as const },
   { href: "mailto:bohdan@pavliukweb.com", label: "Request a Free Website Review", external: true, variant: "secondary" as const },
-  { href: "mailto:bohdan@pavliukweb.com", label: "bohdan@pavliukweb.com", external: true, variant: "secondary" as const },
 ] as const;
 
 const buttonClasses = {
@@ -24,15 +24,8 @@ const buttonClasses = {
 
 export function MobileHeader({ homeHref = "#hero" }: MobileHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { scrollY } = useLenis();
+  const isScrolled = scrollY > SCROLL_THRESHOLD;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -148,6 +141,15 @@ export function MobileHeader({ homeHref = "#hero" }: MobileHeaderProps) {
                   );
                 })}
               </nav>
+              <a
+                href="mailto:bohdan@pavliukweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="mt-auto text-sm text-text-secondary transition-colors hover:text-accent"
+              >
+                bohdan@pavliukweb.com
+              </a>
             </motion.aside>
           </>
         )}

@@ -6,10 +6,15 @@ import {
   AnimatedServiceCard,
 } from "@/components/AnimatedServiceCard";
 import { MobileHeader } from "@/components/MobileHeader";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { ParallaxGradient } from "@/components/ParallaxGradient";
+import { ScrollRevealSection } from "@/components/ScrollRevealSection";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="relative overflow-x-hidden">
+      <ScrollProgress />
+      <ParallaxGradient />
       <MobileHeader />
       <header>
         <HeroSection />
@@ -126,7 +131,7 @@ const services = [
 
 function ServicesSection() {
   return (
-    <section
+    <ScrollRevealSection
       id="services"
       className="mx-auto max-w-4xl px-6 py-20"
     >
@@ -158,7 +163,7 @@ function ServicesSection() {
         ))}
         </AnimatedServiceList>
       </div>
-    </section>
+    </ScrollRevealSection>
   );
 }
 
@@ -166,9 +171,10 @@ function ServicesSection() {
 
 function CaseStudySection() {
   return (
-    <section
+    <ScrollRevealSection
       id="case-study"
       className="mx-auto max-w-4xl px-6 py-20"
+      delay={0.08}
     >
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         What a Dental Clinic Website Should Do
@@ -256,7 +262,7 @@ function CaseStudySection() {
           request a free website review
         </a>
       </p>
-    </section>
+    </ScrollRevealSection>
   );
 }
 
@@ -271,9 +277,10 @@ const reasons = [
 
 function WhyMeSection() {
   return (
-    <section
+    <ScrollRevealSection
       id="why-me"
       className="mx-auto max-w-4xl px-6 py-20"
+      delay={0.06}
     >
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         Why Work With a Solo Developer
@@ -302,7 +309,7 @@ function WhyMeSection() {
           </li>
         ))}
       </ul>
-    </section>
+    </ScrollRevealSection>
   );
 }
 
@@ -315,9 +322,10 @@ const industries = [
 
 function IndustriesSection() {
   return (
-    <section
+    <ScrollRevealSection
       id="industries"
       className="mx-auto max-w-4xl px-6 py-20"
+      delay={0.08}
     >
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         Industries I Work With
@@ -325,7 +333,10 @@ function IndustriesSection() {
       <p className="mt-4 max-w-2xl text-text-secondary">
         Serving all 50 states. Solo practitioners to small teams (1–15 employees).
       </p>
-      <div className="mt-10 -mx-6 overflow-x-auto px-6 scroll-smooth sm:mx-0 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-text-secondary/20">
+      <div
+        className="mt-10 -mx-6 overflow-x-auto px-6 scroll-smooth sm:mx-0 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-text-secondary/20"
+        data-lenis-prevent
+      >
         <ul className="flex gap-4 sm:grid sm:grid-cols-2">
           {industries.map((industry) => (
             <li
@@ -348,7 +359,7 @@ function IndustriesSection() {
         {" "}
         (all 50 states, 1–15 employees).
       </p>
-    </section>
+    </ScrollRevealSection>
   );
 }
 
@@ -356,9 +367,10 @@ function IndustriesSection() {
 
 function FinalCtaSection() {
   return (
-    <section
+    <ScrollRevealSection
       id="contact"
       className="mx-auto max-w-4xl px-6 py-20 text-center"
+      delay={0.1}
     >
       <AnimatedHeading className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         Get a Website That Works for Google and Your Business
@@ -371,7 +383,7 @@ function FinalCtaSection() {
       <p className="mt-6 text-sm text-text-secondary">
         Quick intro call. Clear scope. No pressure.
       </p>
-    </section>
+    </ScrollRevealSection>
   );
 }
 
